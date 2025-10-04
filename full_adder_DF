@@ -26,4 +26,3 @@ $monitor("a=%ob,b=%0b,cin=%0b,sum=%0b,carry=%0b",a,b,cin,sum,carry);
 end
 endmodule
 
-endmodule
