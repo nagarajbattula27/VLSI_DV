@@ -1,0 +1,24 @@
+//half_adder RTL code
+module half_adder(sum,carry,a,b);
+input a,b;
+output sum,carry;
+assign sum=a^b;
+assign carry=a&b;
+endmodule
+
+//half_adder test bench
+
+module half_adder_tb();
+reg a,b;
+wire sum,carry;
+half_adder dut(.a(a),.b(b),.sum(sum),.carry(carry));
+initial begin
+#10;a=0;b=0;
+#10;a=0;b=1;
+#10;a=1;b=0;
+#10;a=1;b=1;
+end
+begin
+$monitor("a=%0b,b=%0b,sum=%0b,carry=%0b",a,b,sum,carry);
+end
+endmodule
