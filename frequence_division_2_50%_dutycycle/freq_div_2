@@ -1,0 +1,12 @@
+module freq_2(clk,reset,count);
+input reset,clk;
+output reg count;
+always@(posedge clk)begin
+if(reset)
+count<=1'b0;
+else if(count==0)
+ count<=~count;
+else
+count<=count+1;
+end
+endmodule
